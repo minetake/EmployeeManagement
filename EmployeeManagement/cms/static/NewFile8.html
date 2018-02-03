@@ -1,0 +1,61 @@
+<html  ng-app='myApp'>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="./css/paper.css">
+<style>@page { size: A4 }</style>
+<script src="./js/angular.min.js"></script>
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script src="./js/angular-sanitize.min.js"></script>
+<script>
+var app = angular.module('myApp', ["ngSanitize"]);
+app.controller('myController', function() {
+ 	this.projects = [
+		{
+			page:[
+				{id:"12",name:"テスト"},
+				{id:"11",name:"サンプルプロジェクト"},
+				{id:"6",name:"ポータルサイトリニューアル"}
+			]
+		},
+		{
+			page:[
+				{id:"4",name:"移動局用気象データ"},
+				{id:"3",name:"船舶ハザードエリア"},
+				{id:"2",name:"船舶航海情報API"},
+				{id:"1",name:"テレビ局向け気象情報"},
+				{id:"5",name:"法人向けポータルサイト"}
+			]
+		},
+		{
+			page:[
+				{id:"100",name:"テスト"}
+			]
+		}
+	];
+});
+{% if forloop.counter == 1 or forloop.counter == 4 %}
+</script>
+</head>
+<body ng-controller="myController as myCtrl">
+<div ng-repeat="pages in myCtrl.projects">
+-----------{{ $index }}<br>
+ <section class="sheet padding-10mm">
+	<div ng-repeat="page in pages">
+	<table boarder="1">
+		<tbody>
+			<tr>
+				<td> ------------------ {{ $parent.$index }}</td>
+				<td> ------------------ </td>
+			<tr>
+			<tr  ng-repeat="project in page">
+				<td>{{ project.id }}</td>
+				<td>{{ project.name }}</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+</section>
+</div>
+</body>
+</html>

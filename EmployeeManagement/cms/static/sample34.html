@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQueryで実装、表データの一括選択 〜第二回〜</title>
+<style type="text/css">
+ @import "http://www.finefinefine.jp/date/2010/10/?mystique=css";
+
+#header-wrapper {
+  height: 60px;
+}
+#header {
+  height: 60px;
+}
+#site-title {
+  padding: 10px 0 0 0;
+}
+#site-title #logo {
+  line-height: 60px;
+  padding: 0;
+  font-size: 400%;
+  font-style: normal;
+  font-weight: bold;
+  margin: 0;
+  float: left;
+}
+#site-title p.headline {
+  line-height: 64px;
+  letter-spacing: 0.4em;
+  padding: 0.2em 0 0.2em 0.8em;
+  font-size: 140%;
+  font-weight: normal;
+  margin: 0 0 0 1em;
+  float: left;
+  border-left: solid 1px #999;
+  color: #aaa;
+}
+h5 {
+  margin-top: 20px;
+}
+#main {
+  clear: left;
+  margin: 20px auto;
+  padding: 5px 20px;
+  width: 800px;
+}
+h3 {
+  font-size: 20px;
+}
+#sample {
+  margin: 10px auto 400px auto;
+  width: 800px;
+  padding: 20px;
+}
+#sample li {
+  padding: 5px;
+  border-bottom: solid 1px #ccc;
+}
+</style>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	$.ajax({
+		url:'sample34.xml',
+		type:'GET',
+		dataType:'xml',
+		timeout:1000,
+		error:function() {
+			alert("ロード失敗");
+		},
+		success:function(xml){
+			$(xml).find("sample").each(function() {
+				$("#sample ul").append('<li><a href="' + $(this).find('url').text() +  '" target="_blank">' + $(this).find('title').text() + '</a></li>');
+			});
+		}
+	});
+});
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18943219-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body class="archive date col-2-right fixed loggedin browser-chrome">
+
+<div id="page">
+
+<div class="page-content header-wrapper">
+
+<div id="header">
+
+<div id="site-title" class="clear-block">
+<div id="logo"><a href="http://www.finefinefine.jp"><img src="http://www.finefinefine.jp/wp/wp-content/uploads/F3.png" title="fine×3 |  jQueryのサンプルやtipsの紹介 
+" alt="fine×3 | jQueryやらhtml5,cssとか" /></a></div>        <p class="headline"> jQueryのサンプルやtipsの紹介 
+</p>
+</div><!--site-title-->
+
+</div><!--header-->
+
+</div><!--page-content-->
+
+<div id="main">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6029561684915154";
+/* サンプル用 */
+google_ad_slot = "4326642194";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<h5>jQueryでXMLの読み込み＆出力をする</h5>
+<div id="sample">
+<p>xmlの内容をパースしhtml出力しています。</p>
+<ul></ul>
+</div>
+
+<div><a href="http://www.finefinefine.jp/web/kiji2203/" title="jQueryでXMLの読み込み＆出力をする"><img src="btn_return_off.png"></a></div>
+</div><!--main-->
+
+</div><!--page-->
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+	
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8" />
+<title>AngularJS TIPS</title>
+</head>
+<body ng-controller="myController as myCtrl">
+<ul>
+  <li class="child" ng-repeat="item in myCtrl.items" add-red>
+    <span class="item">{{item}}</span>
+  </li>
+</ul>
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+<!--2ngSanitizeモジュールをインポート-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-sanitize.min.js"></script>
+<script>
+var app = angular.module('myApp', []);
+//app.controller('myController', function($scope) {
+  //$scope.items = [
+app.controller('myController', function() {
+  this.items = [
+    'child1',
+    'child2',
+    'child3'
+  ];
+});
+app.directive('addRed', function() {
+  return {
+    link: function(scope, elem) {
+      elem.on('click', function() {
+        var item = angular.element(elem[0].querySelector('.item'));
+        // elem.find('.item').addClass('red')ではない
+        //item.addClass('red');
+ 		console.log("test");
+      });
+    }
+  };
+});
+</script>
+</body>
+</html>

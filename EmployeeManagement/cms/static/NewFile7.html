@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app ng-jq xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./js/angular.min.js"></script>
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script src="./js/angular-sanitize.min.js"></script>
+<script>
+
+var sample1 = function() {
+	var d = $.Deferred();
+	
+	console.log(d);
+	
+	$.ajax({
+		type: 'GET',
+		url: "/sample1/",
+		dataType: 'JSON',
+		success: function(data) {
+			return d.resolve(data);
+		},
+		error: function(){
+			alert('NG....');
+		}
+	});
+	return d.promise();
+};
+
+var sample2 = function() {
+	var d = $.Deferred();
+	
+	console.log(d);
+	
+	$.ajax({
+		type: 'GET',
+		url: "/sample2/",
+		dataType: 'JSON',
+		success: function(data) {
+			return d.resolve(data);
+		},
+		error: function(){
+			alert('NG....');
+		}
+	});
+	return d.promise();
+};
+
+var sample3 = function() {
+	var d = $.Deferred();
+	
+	console.log(d);
+	
+	$.ajax({
+		type: 'GET',
+		url: "/sample3/",
+		dataType: 'JSON',
+		success: function(data) {
+			return d.resolve(data);
+		},
+		error: function(){
+			alert('NG....');
+		}
+	});
+	return d.promise();
+};
+
+sample2();
+sample3();
+
+$.when(
+		sample1()
+
+).done(
+		function(dat1) {
+			console.log(dat1);
+			//console.log(dat2);
+			//console.log(dat3);
+		}
+);
+
+
+/* jQuery.when(
+		
+	program_sel(),
+	console.log("test1")
+	
+).done(function() {
+	console.log("test2");
+}); */
+
+</script>
+
+</head>
+<body>
+test
+</body>
+</html>

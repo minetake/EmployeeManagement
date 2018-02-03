@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8" />
+
+<title>AngularJS TIPS</title>
+</head>
+<body>
+
+<div id="myCtrl" ng-controller="myController as myCtrl">
+<div id="001" add-text='101'>{{myCtrl.msg}}</div>
+<ul>
+	<li id="002" class="child" ng-repeat="item in myCtrl.items" add-text='item'>
+		<span class="item">{{item}}</span>
+	</li>
+</ul>
+<div id="001" class="001" sel-text>{{myCtrl.msg2}}</div>
+<div id="001" class="001" sel-text2>{{myCtrl.msg2}}</div>
+
+</div>
+
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+	<script src="js/angular-sanitize.min.js"></script>
+	<script>
+		/* // myAppモジュールにmyControllerコントローラーを登録
+		 angular.module('myApp', [])
+		 .controller('myController', ['$scope', function($scope) {
+		 // 変数msgを初期化
+		 $scope.msg = 'こんにちは、誰かさん！';
+		 // clickイベントリスナーを設定
+		 $scope.onclick = function() {
+		 console.log("test");
+		 $scope.msg = 'こんにちは、' + $scope.name + 'さん！';
+		 };
+		 }]); */
+
+		var app = angular.module('myApp', [ "ngSanitize" ]);
+
+		app.controller('myController', function() {
+
+			this.msg = "こんにちは";
+			this.msg2 = "こんばんわ";
+			// 変数msgを初期化
+ 			//this.onclick = function() {
+				//console.log(this.msg);
+				//$scope.msg = 'こんにちは、' + $scope.name + 'さん！';
+				//this.test = '<a href="#">test message</a>';
+			//};
+			
+			this.items = [
+				'child1',
+				'child2'
+			];
+			
+			
+		});
+		
+		var textareaflag = 0;
+		var flg;
+		var item = undefined;
+		app.directive('addText', function($parse){
+			return {
+				link: function(scope, elem, attr) {
+					
+					var value = $parse(attr.addText)(scope);
+					console.log(value);
+					
+					elem.on('click', function (){
+
+						console.log(item);
+						
+						if ( !item ) {
+						item = angular.element($(this));
+						
+
+						
+						//if ( !item["cnt"] ) {
+							item["cnt"] = 0;
+
+						}
+
+						console.log("cnt : " + item.cnt);
+						
+						// クリックしてテキストエリアに変更
+						//if ( textareaflag == 0 ) {
+						if ( item["cnt"] == 0 ) {	
+							console.log("texareaflag 0 : " + textareaflag );
+							console.log(item["cnt"]);
+							var html = '<textarea id="101" class="extraction">' + item.text() + '</textarea>';
+							item.html(html);
+							textareaflag = textareaflag + 1;
+							item["cnt"] = item["cnt"] + 1;
+						}
+						// テキストエリアを選択
+						// テキストエリアが解除されないように制御
+						// 文字を入力
+						// テキストエリアが解除されないように制御
+ 						//if ( textareaflag >= 1 ) {
+ 						if ( item["cnt"] >= 1 ) {	
+							console.log("texareaflag 1 : " + textareaflag );							
+							textareaflag = textareaflag + 1;
+							item["cnt"] = item["cnt"] + 1;
+						}
+						// テキストエリアを選択　入力文字を反映してテキストアリアを解除する
+						//if ( textareaflag > 3 ) {
+						if ( item["cnt"] > 3 ) {	
+							console.log("texareaflag 2 : " + textareaflag );
+							//var item = angular.element($(this));
+							//console.log(document.getElementById('101').value);
+							//item.html('<p>' + document.getElementById('101').value + '</p>');
+							console.log(item);
+							item.html('<p>' + item.find('.extraction').val() + '</p>');
+							//item.html('<span>' + angular.element('#101').val() + '<span>');
+							textareaflag = 0;
+							item = undefined;
+						}
+						
+					})
+/* 					elem.on('mouseout', function() {
+					//var item = angular.element($(this));
+					//item.html('<span>' + item.find('.extraction').val() + '</span>');
+					console.log('mouseout');
+					}) */
+				}
+			};
+		});
+		
+		var selectflag = 0;
+		var cnt = 0;
+		app.directive('selText', function(){
+			return {
+				link: function(scope, elem) {
+					elem.on('click', function() {						
+						var item = angular.element($(this));
+						var el = document.getElementById('002');
+
+						console.log("selectflag X : " + selectflag);
+						
+						if ( selectflag == 0 ) {
+							console.log("selectflag 0 : " + selectflag );
+							var sel = '<select class="extraction" id="002">' +
+										'<option value="test1">テスト1' +
+										'<option value="test2">テスト2' +
+										'<option value="test3">テスト3' +
+									'</select>';
+							item.html(sel);
+							selectflag = 1;
+						} 
+						
+						if ( selectflag >= 1 ) {
+							console.log("selectflag 1 : " + selectflag );
+							selectflag = selectflag + 1;
+						}
+						
+						if ( selectflag > 3 ) {
+							console.log("selectflag 2 : " + selectflag );
+							if ( el ) {
+								console.log("1 --- 002 click");
+								item.html('<span>' + item.find('.extraction').val() + '</span>');
+								selectflag = 0;
+							}
+						}
+												
+/* 						item.change(function(){
+							if ( item.find('.extraction').val() ) {
+								console.log(item.find('.extraction').val());							
+								item.html('<span>' + item.find('.extraction').val() + '</span>');
+								selectflag = 0;
+							} 
+						}); */
+						
+					})
+/* 					elem.on('mouseout', function() {
+							var item = angular.element($(this));
+							item.html('<span>' + item.find('.extraction').val() + '</span>');
+							console.log('mouseout');
+					}) */
+
+				}
+			};
+		});
+		
+/* 		app.directive('selText2', function(){
+			return {
+				link: function(scope, elem) {
+					elem.on('click', function() {
+							var item = angular.element($(this));
+							console.log('click');
+							var sel = '<select class="extraction" id="002">' +
+							'<option value="test1">テスト1' +
+							'<option value="test2">テスト2' +
+							'<option value="test3">テスト3' +
+							'</select>';
+							item.html(sel);
+						})
+					elem.on('mouseover', function() {
+							var item = angular.element($(this));
+							console.log('mouseover');
+						})
+					elem.on('mouseout', function() {
+							var item = angular.element($(this));
+							item.html('<span>' + item.find('.extraction').val() + '</span>');
+							console.log('mouseout');
+						})
+				}
+			};
+		}); */
+		
+		
+		
+		
+/* 		app.directive('addText', function(){
+			return {
+				link: function(scope, elem) {
+					elem.on('click', function (){
+						console.log("click");
+						var item = angular.element(elem[0].querySelector('.item'));
+						//item.addClass('red');
+							console.log(item.text());
+							console.log($(this).data());
+						item.html('<textarea>' + item.text() + '</textarea>');
+					});
+				}
+			};
+		}); */
+		
+		
+/* 		$(this).on('click',function(e){
+			//alert(e);
+			console.log("jquery");
+			console.log(e.target.id);
+			if (e.target.id != "001") {
+				var val = $('#001').text();
+				$('#001').html("<div id='001'>"+ val + "</div>");
+			}
+		}); */
+		
+		
+/* 		$(function () {
+			
+			$('#001').click(function(){
+				console.log("test");
+				var val = $(this).text();
+				$(this).html("<textarea id='001'>"+ val + "</textarea>");
+			});
+		
+		});	 */	
+		
+	</script>
+</body>
+</html>

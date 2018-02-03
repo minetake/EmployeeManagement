@@ -1,0 +1,230 @@
+<html>
+<head>
+
+</head>
+<body>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQTpXj82d8UpCi97wzo_nKXL7nYrd4G70"></script>
+
+<p>
+With google maps <a href="https://developers.google.com/maps/documentation/javascript/reference#MapOptions">API</a> You can easy customize your map.
+</p>
+
+<div class="google-map" id="map1" style="height:500px"></div>
+
+<script type="text/javascript">
+
+// When the window has finished loading google map
+google.maps.event.addDomListener(window, 'load', init);
+
+var myLatLng = {
+		lat : 35.658954,
+		lng : 139.754649
+	};
+	var LatLng = {};
+	LatLng['m1'] = {
+		lat : 35.658954,
+		lng : 139.754649
+	};
+	LatLng['m2'] = {
+		lat : 35.666401,
+		lng : 139.754207
+	};
+	LatLng['m3'] = {
+		lat : 35.645798,
+		lng : 139.747657
+	};
+	LatLng['m4'] = {
+		lat : 35.655002,
+		lng : 139.743543
+	};
+
+	var member_list = "<li id='m1' class='rgba1'>funteam（株）</li>" + "<li id='m2' class='rgba1'>hogehoge（株）</li>" + "<li id='m3' class='rgba1'>XXネットワーク（株）</li>" + "<li id='m4' class='rgba1'>（株）XXシステム</li>";
+
+	function CenterControl(controlDiv, map) {
+
+		// Set CSS for the control border.
+		var controlUI = document.createElement('div');
+		controlUI.className = 'empty';
+		controlUI.style.borderRadius = '3px';
+		controlUI.style.cursor = 'pointer';
+		controlUI.style.textAlign = 'left';
+		controlUI.title = 'Click to recenter the map';
+		controlDiv.appendChild(controlUI);
+
+		// Set CSS for the control interior.
+		var controlText = document.createElement('div');
+		controlText.style.color = 'rgb(25,25,25)';
+		controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+		controlText.style.fontSize = '14px';
+		//controlText.style.lineHeight = '38px';
+		controlText.style.paddingLeft = '5px';
+		//controlText.style.paddingRight = '5px';
+		controlUI.style.width = '200px';
+		controlUI.style.height = '100px';
+		controlText.innerHTML = '<div class="demo">' + member_list + '<div>';
+		controlUI.appendChild(controlText);
+
+		// Setup the click event listeners: simply set the map to Chicago.
+		controlUI.addEventListener('click', function(obj) {
+			console.log(obj.target.id);
+			var ll = 'm1';
+			if (obj.target.id) {
+				ll = obj.target.id;
+			}
+			map.setCenter(LatLng[ll]);
+		});
+
+	}
+
+
+
+
+			function init() {
+
+				// Options for Google map
+				// More info see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+				var mapOptions1 = {
+					zoom : 15,
+					center : new google.maps.LatLng(35.658954, 139.754649),
+					// Style for Google Maps
+					styles : [{
+						"featureType" : "water",
+						"stylers" : [{
+							"saturation" : 43
+						}, {
+							"lightness" : -11
+						}, {
+							"hue" : "#0088ff"
+						}]
+					}, {
+						"featureType" : "road",
+						"elementType" : "geometry.fill",
+						"stylers" : [{
+							"hue" : "#ff0000"
+						}, {
+							"saturation" : -100
+						}, {
+							"lightness" : 99
+						}]
+					}, {
+						"featureType" : "road",
+						"elementType" : "geometry.stroke",
+						"stylers" : [{
+							"color" : "#808080"
+						}, {
+							"lightness" : 54
+						}]
+					}, {
+						"featureType" : "landscape.man_made",
+						"elementType" : "geometry.fill",
+						"stylers" : [{
+							"color" : "#ece2d9"
+						}]
+					}, {
+						"featureType" : "poi.park",
+						"elementType" : "geometry.fill",
+						"stylers" : [{
+							"color" : "#ccdca1"
+						}]
+					}, {
+						"featureType" : "road",
+						"elementType" : "labels.text.fill",
+						"stylers" : [{
+							"color" : "#767676"
+						}]
+					}, {
+						"featureType" : "road",
+						"elementType" : "labels.text.stroke",
+						"stylers" : [{
+							"color" : "#ffffff"
+						}]
+					}, {
+						"featureType" : "poi",
+						"stylers" : [{
+							"visibility" : "off"
+						}]
+					}, {
+						"featureType" : "landscape.natural",
+						"elementType" : "geometry.fill",
+						"stylers" : [{
+							"visibility" : "on"
+						}, {
+							"color" : "#b8cb93"
+						}]
+					}, {
+						"featureType" : "poi.park",
+						"stylers" : [{
+							"visibility" : "on"
+						}]
+					}, {
+						"featureType" : "poi.sports_complex",
+						"stylers" : [{
+							"visibility" : "on"
+						}]
+					}, {
+						"featureType" : "poi.medical",
+						"stylers" : [{
+							"visibility" : "on"
+						}]
+					}, {
+						"featureType" : "poi.business",
+						"stylers" : [{
+							"visibility" : "simplified"
+						}]
+					}]
+				};
+
+				var marker1 = new google.maps.Marker({
+					position : myLatLng,
+					title : 'ファンチーム株式会社'
+				});
+
+				var marker2 = new google.maps.Marker({
+					position : {
+						lat : 35.666401,
+						lng : 139.754207
+					},
+					title : 'hogehoge(株)'
+				});
+
+				var marker3 = new google.maps.Marker({
+					position : {
+						lat : 35.645798,
+						lng : 139.747657
+					},
+					title : 'XXネットワーク(株)'
+				});
+
+				var marker4 = new google.maps.Marker({
+					position : {
+						lat : 35.655002,
+						lng : 139.743543
+					},
+					title : '(株)XXシステム'
+				});
+				// Get all html elements for map
+				var mapElement1 = document.getElementById('map1');
+
+				// Create the Google Map using elements
+				var map1 = new google.maps.Map(mapElement1, mapOptions1);
+
+				marker1.setMap(map1);
+				marker2.setMap(map1);
+				marker3.setMap(map1);
+				marker4.setMap(map1);
+
+				// Create the DIV to hold the control and call the CenterControl() constructor
+				// passing in this DIV.
+				var centerControlDiv = document.createElement('div');
+				var centerControl = new CenterControl(centerControlDiv, map1);
+
+				centerControlDiv.index = 1;
+				map1.controls[google.maps.ControlPosition.LEFT_TOP].push(centerControlDiv);
+
+			}
+
+		</script>
+
+
+</body>
+</html>

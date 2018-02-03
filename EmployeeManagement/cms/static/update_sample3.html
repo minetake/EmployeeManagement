@@ -1,0 +1,157 @@
+
+
+<!DOCTYPE HTML>
+
+<html ng-app="ngbootcamp">
+<head>
+<script src="/ngbootcamp/static/111213/js/perf/stub.js" type="text/javascript"></script><meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.9.0/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
+    <script>
+
+    var ngbootcamp = angular.module('ngbootcamp', ['ui.bootstrap']);
+
+    ngbootcamp.controller('recordCtl', function($scope, $filter, $modal, $timeout, $q){
+
+        $scope.records = [
+            {
+                Id: "001",
+                Name: 'Naoki Hanzawa',
+                email__c: 'hanzawa@hoge.com'
+            },
+            {
+                Id: "002",
+                Name: 'Shunichi Kurosaki',
+                email__c: 'kurosaki@hoge.com'
+            }
+        ];
+
+        $scope.fields = [
+            {
+                name: "Id",
+                label: "Id",
+                type: "ID"
+            },
+            {
+                name: "Name",
+                label: "ゲスト名",
+                type: "STRING"
+            },
+            {
+                name: "email__c",
+                label: "Email",
+                type: "EMAIL"
+            }
+        ];
+
+        $scope.updateRecord = function(){
+            $modal.open({
+                templateUrl: 'T_inProgress',
+                backdrop: 'static',
+                scope: $scope
+            });
+
+/*             $scope.remotingProgress = 33;
+            $scope.remotingStatus = "データを更新しています...";
+
+            $scope.deferredUpdateRecord()
+            .then(
+            function(){
+                $scope.remotingProgress = 66;
+                $scope.remotingStatus = "ゲストリストをリフレッシュしています...";
+                return $scope.deferredGetRecords();
+            })
+            .then(function(records){
+                $scope.records = records;
+                $scope.remotingProgress = 100;
+                $scope.remotingStatus = "更新が完了しました。";
+            }); */
+        }
+
+        $scope.deferredUpdateRecord = function(){
+            var deferred = $q.defer();
+            var record = angular.copy($scope.record);
+
+            $timeout(function(){
+                angular.forEach($scope.records, function(value, key){
+                    if(value.Id == record.Id){
+                        $scope.records[key] = record;
+                        deferred.resolve();
+                    }
+                });
+            }, 700);
+            return deferred.promise;
+        }
+
+        $scope.deferredGetRecords = function(){
+            var deferred = $q.defer();
+
+            $timeout(function(){
+                deferred.resolve($scope.records);
+            }, 700);
+            return deferred.promise;
+        }
+
+        $scope.getRecord = function(record){
+            $scope.record = angular.copy(record);
+        }
+    });
+    </script>
+</head>
+<body ng-controller="recordCtl">
+
+    <div class="container" style="margin-top:20px;">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        &#12466;&#12473;&#12488;
+                    </div>
+                    <div class="list-group">
+                        <a class="list-group-item" href="#" ng-click="getRecord(record)" ng-repeat="record in records">{{record.Name}}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h1>{{record.Name}}</h1>
+                <form role="form">
+                    <div class="form-group">
+                        <label>&#12466;&#12473;&#12488;&#21517;</label>
+                        <input class="form-control" ng-model="record.Name" placeholder="&#12466;&#12473;&#12488;&#21517;" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input class="form-control" ng-model="record.email__c" placeholder="Email" type="email" />
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success" ng-click="updateRecord()">&#26356;&#26032;</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <script id="T_inProgress" type="text/ng-template">
+        <div class="modal-header">
+            <h3>
+                <span ng-show="remotingProgress < 100">処理中</span>
+                <span ng-show="remotingProgress == 100">完了</span>
+            </h3>
+        </div>
+        <div class="modal-body">
+            <div>{{remotingStatus}}</div>
+            <progressbar ng-class="(remotingProgress < 100) ? 'progress-striped active' : 'progress'" value="remotingProgress" type="success"></progressbar>
+        </div>
+        <div class="modal-footer" ng-show="remotingProgress == 100">
+            <button type="button" class="btn btn-success" ng-click="$close()">閉じる</button>
+        </div>
+    </script>
+
+</body>
+</html>

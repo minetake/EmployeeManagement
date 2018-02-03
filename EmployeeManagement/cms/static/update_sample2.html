@@ -1,0 +1,158 @@
+<apex:page showHeader="false" standardStyleSheets="false" applyBodyTag="false" applyHtmlTag="false" docType="html-5.0" >
+   
+<html ng-app="ngbootcamp">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.min.css"></link>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+    <c:RemoteTK />
+    <script>
+    var ngbootcamp = angular.module('ngbootcamp', ['ui.bootstrap']);
+ 
+    ngbootcamp.controller('guestCtl', function($scope, $modal, $q){
+        $scope.updateGuest = function(){
+            $modal.open({
+                templateUrl: "T_inProgress",
+                backdrop: "static",
+                scope: $scope
+            });
+ 
+            $scope.remotingProgress = 33;
+            $scope.remotingStatus = "データを更新しています...";
+ 
+            $scope.deferredUpdateGuest()
+            .then(
+            function(){
+                $scope.remotingProgress = 66;
+                $scope.remotingStatus = "ゲストリストをリフレッシュしています...";
+                return $scope.deferredGetGuests();
+            },
+            function(result){
+                return $q.reject(result);
+            })
+            .then(
+            function(guests){
+                $scope.guests = guests;
+                $scope.remotingProgress = 100;
+                $scope.remotingStatus = "更新が完了しました。";
+            },
+            function(result){
+                console.log(result);
+            });
+        }
+ 
+        $scope.deferredUpdateGuest = function(){
+            var deferred = $q.defer();
+            var guest = angular.copy($scope.guest);
+            delete guest.attributes;
+ 
+            $scope.force.update(
+                "guest__c",
+                $scope.guest.Id,
+                guest,
+                function(result){
+                    deferred.resolve();
+                },
+                function(result){
+                    deferred.reject(result);
+                }
+            );
+            return deferred.promise;
+        }
+ 
+        $scope.getGuest = function(recordId){
+            $scope.force.retrieve(
+                "guest__c",
+                recordId,
+                "Id,Name,email__c",
+                function(result){
+                    $scope.guest = result;
+                    $scope.$apply();
+                },
+                    function(result){
+                    console.log(result);
+                }
+            );
+        }
+ 
+        $scope.deferredGetGuests = function(){
+            var deferred = $q.defer();
+            var soql = "select Id, Name, CreatedDate from guest__c";
+            $scope.force.query(
+                soql,
+                function(result){
+                    deferred.resolve(result.records);
+                },
+                function(result){
+                    deferred.reject(result);
+                }
+            );
+            return deferred.promise;    
+        }
+ 
+        $scope.force = new remotetk.Client();
+        $scope.deferredGetGuests()
+        .then(
+            function(guests){
+                $scope.guests = guests;
+            },
+            function(result){
+                console.log(result);
+            }
+        );
+    });
+    </script>
+</head>
+<body ng-controller="guestCtl">
+    <div class="container" style="margin-top:20px;">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        ゲスト
+                    </div>
+                    <div class="list-group">
+                        <a class="list-group-item" href="#" ng-click="getGuest(guest.Id)" ng-repeat="guest in guests">{{guest.Name}}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h1>{{guest.Name}}</h1>
+                <form role="form">
+                    <div class="form-group">
+                        <label>ゲスト名</label>
+                        <input ng-model="guest.Name" type="text" class="form-control" placeholder="ゲスト名" />
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input ng-model="guest.email__c" type="email" class="form-control" placeholder="Email" />
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success" ng-click="updateGuest()">更新</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- Modal for inProgress -->
+    <script type="text/ng-template" id="T_inProgress">
+        <div class="modal-header">
+            <h3>
+                <span ng-show="remotingProgress < 100">処理中</span>
+                <span ng-show="remotingProgress == 100">完了</span>
+            </h3>
+        </div>
+        <div class="modal-body">
+            <div>{{remotingStatus}}</div>
+            <progressbar ng-class="(remotingProgress < 100) ? 'progress-striped active' : 'progress'" value="remotingProgress" type="success"></progressbar>
+        </div>
+        <div class="modal-footer" ng-show="remotingProgress == 100">
+            <button type="button" class="btn btn-success" ng-click="$close()">閉じる</button>
+        </div>
+    </script><!-- Modal for inProgress-->
+ 
+</body>
+</html>

@@ -1,0 +1,2057 @@
+{% load staticfiles %}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html ng-app="myApp" ng-jq xmlns="http://www.w3.org/1999/xhtml">
+<!--This file was converted to xhtml by LibreOffice - see http://cgit.freedesktop.org/libreoffice/core/tree/filter/source/xslt for the code.-->
+<head profile="http://dublincore.org/documents/dcmi-terms/">
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+<title xml:lang="en-US">- no title specified</title>
+<meta name="google" content="notranslate" />
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<meta name="DCTERMS.title" content="" xml:lang="en-US" />
+<meta name="DCTERMS.language" content="en-US" scheme="DCTERMS.RFC4646" />
+<meta name="DCTERMS.source"
+	content="http://xml.openoffice.org/odf2xhtml" />
+<meta name="DCTERMS.issued" content="2016-10-01T14:25:12.988432000"
+	scheme="DCTERMS.W3CDTF" />
+<meta name="DCTERMS.modified" content="2016-10-01T14:25:34.370241000"
+	scheme="DCTERMS.W3CDTF" />
+<meta name="DCTERMS.provenance" content="" xml:lang="en-US" />
+<meta name="DCTERMS.subject" content="," xml:lang="en-US" />
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"
+	hreflang="en" />
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/"
+	hreflang="en" />
+<link rel="schema.DCTYPE" href="http://purl.org/dc/dcmitype/"
+	hreflang="en" />
+<link rel="schema.DCAM" href="http://purl.org/dc/dcam/" hreflang="en" />
+
+<!--Print Style-->
+<link rel="stylesheet" href="{% static 'css/paper.css' %}">
+<style>@page { size: A4 }</style>
+
+<style type="text/css">
+
+table {
+	font-family: MS PGothic;
+	border-collapse: collapse;
+	border-spacing: 0;
+	empty-cells: show;
+	table-layout:fixed;
+	/*border-collapse: collapse;*/
+}
+
+td, th {
+	vertical-align: top;
+	/*font-size: 10pt;*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both
+}
+
+ol, ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li span.odfLiEnd " - IE 7 issue-->li span . {
+	clear: both;
+	line-height: 0;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+span.footnodeNumber {
+	padding-right: 1em;
+}
+
+span.annotation_style_by_filter {
+	font-size: 95%;
+	font-family: Arial;
+	background-color: darkred;
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+* {
+	margin: 0;
+}
+
+.ta1 {
+	writing-mode: lr-tb;
+	table-layout: fixed;
+}
+
+.ce2, .ce10, .ce21, .ce29, .ce31 {
+    font-size: 10pt;
+    border-bottom-width: 0.0261cm;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    background-color: cornflowerblue;
+    border-left-width: 0.0261cm;
+    border-left-style: solid;
+    border-left-color: black;
+    padding: 0.71mm;
+}
+
+.ce11, .ce13, .ce14, .ce19, .ce20, .ce24, .ce30, .ce32, .ce34 {
+    font-size: 9pt;    
+}    
+
+.ce3 {
+    font-size: 9pt;
+}    
+
+.ce17, .ce25, .ce26, .ce28, .ce33 {
+    font-size: 10pt;
+    border-bottom-width: 0.0621cm;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    background-color: white;
+    border-left-width: 0.0261cm;
+    border-left-style: solid;
+    border-left-color: black;
+    padding: 0.71mm;
+}
+
+.ce5, .ce6, .ce22, .ce23 {
+    font-size: 9pt;
+}
+
+.ce1 {
+	background-color: white;
+	border-style: none;
+	padding: 0.71mm;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	font-size: 16pt;
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: bold;
+}
+
+.ce10 {
+	border-bottom-width: 0.0261cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: cornflowerblue;
+	border-left-width: 0.0261cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0261cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0621cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/	
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce11 {
+	border-bottom-style: none;
+	background-color: white;
+	border-left-width: 0.0261cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0261cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0261cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: top;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce12 {
+	border-bottom-style: none;
+	background-color: white;
+	border-left-width: 0.0261cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-style: none;
+	border-top-style: none;
+	vertical-align: top;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce13 {
+	border-bottom-width: 0.0261cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: white;
+	border-left-width: 0.0261cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0261cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-style: none;
+	vertical-align: top;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce14 {
+	background-color: white;
+	border-width: 0.0261cm;
+	border-style: solid;
+	border-color: black;
+	padding: 0.71mm;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce15 {
+	/*font-family: ヒラギノ角ゴシック;*/
+	background-color: white;
+	border-style: none;
+	padding: 0.71mm;
+	vertical-align: top;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce16 {
+	/*font-family: ヒラギノ角ゴシック;*/
+	border-bottom-width: 0.0261cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: white;
+	border-left-width: 0.0261cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0261cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0621cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce17 {
+	border-bottom-width: 0.0621cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: white;
+	border-left-width: 0.0261cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0261cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0261cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce18 {
+	border-bottom-style: none;
+	background-color: white;
+	border-left-style: none;
+	padding: 0.71mm;
+	border-right-width: 0.0261cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-style: none;
+	vertical-align: top;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce19 {
+	background-color: white;
+	border-width: 0.0261cm;
+	border-style: solid;
+	border-color: black;
+	padding: 0.71mm;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce2 {
+	border-bottom-width: 0.0261cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: cornflowerblue;
+	border-left-width: 0.0621cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0261cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0621cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce20 {
+	background-color: white;
+	border-width: 0.0261cm;
+	border-style: solid;
+	border-color: black;
+	padding: 0.71mm;
+	vertical-align: top;
+	text-align: left ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 9pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce21 {
+	border-bottom-width: 0.0261cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color:cornflowerblue;
+	border-left-width: 0.0261cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0621cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0261cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce22 {
+	border-bottom-width: 0.0621cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: white;
+	border-left-width: 0.0261cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0621cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0261cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: top;
+	text-align: left ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 10pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce23 {
+	border-bottom-width: 0.0261cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: white;
+	border-left-width: 0.0261cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0621cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0621cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce24 {
+	background-color: white;
+	border-width: 0.0261cm;
+	border-style: solid;
+	border-color: black;
+	padding: 0.71mm;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 10pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce25 {
+	border-bottom-width: 0.0621cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: white;
+	border-left-width: 0.0261cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-style: none;
+	border-top-width: 0.0261cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce26 {
+	border-bottom-width: 0.0621cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: white;
+	border-left-style: none;
+	padding: 0.71mm;
+	border-right-style: none;
+	border-top-width: 0.0261cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce27 {
+	border-bottom-width: 0.0261cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: cornflowerblue;
+	border-left-width: 0.0261cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0261cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0621cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce28 {
+	border-bottom-width: 0.0621cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: white;
+	border-left-style: none;
+	padding: 0.71mm;
+	border-right-width: 0.0261cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0261cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce29 {
+	border-bottom-width: 0.0261cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: cornflowerblue;
+	border-left-width: 0.0261cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0621cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0621cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce3 {
+	border-bottom-width: 0.0621cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: cornflowerblue;
+	border-left-width: 0.0621cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0261cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0261cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce30 {
+	border-bottom-width: 0.0261cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: white;
+	border-left-width: 0.0261cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0621cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0261cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 10pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce31 {
+	border-bottom-width: 0.0261cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: cornflowerblue;
+	border-left-width: 0.0261cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0621cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0261cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 10pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce32 {
+	border-bottom-width: 0.0261cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: white;
+	border-left-width: 0.0261cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-style: none;
+	border-top-width: 0.0261cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: right ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 10pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce33 {
+	border-bottom-width: 0.0621cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: white;
+	border-left-style: none;
+	padding: 0.71mm;
+	border-right-width: 0.0621cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0261cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce34 {
+	border-bottom-width: 0.0261cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: white;
+	border-left-style: none;
+	padding: 0.71mm;
+	border-right-width: 0.0621cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0261cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 10pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce4 {
+	background-color: white;
+	padding: 0.71mm;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce5 {
+	border-bottom-width: 0.0133cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: white;
+	border-left-width: 0.0621cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0261cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-style: none;
+	vertical-align: middle;
+	text-align: left ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce6 {
+	border-bottom-width: 0.0133cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: white;
+	border-left-width: 0.0621cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0261cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0133cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: left ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce7 {
+	border-bottom-width: 0.0133cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: white;
+	border-left-width: 0.0621cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0261cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0133cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce8 {
+	border-bottom-width: 0.0621cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: white;
+	border-left-width: 0.0621cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0261cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0133cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.ce9 {
+	border-bottom-width: 0.0261cm;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: white;
+	border-left-width: 0.0621cm;
+	border-left-style: solid;
+	border-left-color: black;
+	padding: 0.71mm;
+	border-right-width: 0.0261cm;
+	border-right-style: solid;
+	border-right-color: black;
+	border-top-width: 0.0261cm;
+	border-top-style: solid;
+	border-top-color: black;
+	vertical-align: middle;
+	text-align: center ! important;
+	margin-left: 0mm;
+	writing-mode: page;
+	color: black;
+	/*font-size: 11pt;*/
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none ! important;
+	font-weight: normal;
+}
+
+.co1 {
+	width: 22.58mm;
+}
+
+.ro1 {
+	height: 4.52mm;
+}
+
+.ro2 {
+	height: 5.57mm;
+}
+
+.ro3 {
+	height: 4.73mm;
+}
+
+.ro4 {
+	height: 5.17mm;
+}
+
+.T1 {
+	color: black;
+	/*font-family: ヒラギノ角ゴシック;*/
+	font-size: 8pt;
+	font-weight: bold;
+	text-decoration: none ! important;
+	font-style: normal;
+	text-shadow: none;
+}
+
+.custom02 input,
+.custom02 button,
+.custom02 textarea,
+.custom02 select {
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+/*cssの記述*/
+#z1 {
+    display:none;
+    position:absolute;
+    background-color:#eceef7;
+    box-shadow: 4px 4px 4px -2px gray;
+    padding:10px;
+    padding-top:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    padding-left:10px;   
+    top:0;
+    left:0;
+    }
+ 
+#z1 table th {
+    cursor:move;
+    }
+
+.pull-left {
+    float: left!important;
+}
+
+.pull-right {
+    float: right!important;
+}
+
+.btn.btn-flat {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-width: 1px;
+    width: 50px;
+}
+
+.btn-default {
+    background-color: #d7d7e4;
+    color: #444;
+    border-color: #ddd;
+}
+
+.btn {
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid transparent;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+menu>.user-footer {
+    content: " ";
+    display: table;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;    
+}
+
+.menu {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    padding: 1px 0 0 0;
+    border-top-width: 0;
+    width: 200px;
+}
+
+.menu>.user-footer .btn-default {
+    /* color: #666666; */
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+</style>
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>-->
+<script src="http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js"></script>
+<script src="{% static '/bower_components/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'js/angular.min.js' %}"></script>
+<script src="{% static 'js/angular-sanitize.min.js' %}"></script>
+
+<script>
+//&lt;QuerySet [{&#39;age&#39;: 51, &#39;gender__gender&#39;: &#39;男&#39;, &#39;address__railway_routes&#39;: &#39;東西&#39;, &#39;last_name_kana&#39;: &#39;ミネギシ&#39;, &#39;address__station&#39;: &#39;南砂町&#39;, &#39;final_education&#39;: &#39;日本大学生産工学部 中退&#39;, &#39;nationality&#39;: &#39;日本&#39;, &#39;first_name_kana&#39;: &#39;タケシ&#39;, &#39;last_name_kan&#39;: &#39;峰岸&#39;, &#39;appeal&#39;: &#39;Web系のシステム開発をこれまでやってきております。主にPerl言語により開発をしておりますが、Python、PHP、Nodejsについても経験をしております。PerlにおいてはApacheモジュールを使用したSSOの開発、独自フレームワークの構築も可能です。作業範囲としては要件定義からプログラムまで担当しておりますので、プロジェクトの立ち上げからの参画でも、お役に立てるのではないかと思っております。&#39;, &#39;first_name_kan&#39;: &#39;健&#39;, &#39;address__working&#39;: 20}]&gt;
+
+$(function(){
+
+	//プリントプレビュークリックイベント
+	$(".print-preview").click(function(){
+		doPrintPreview();
+	});
+
+});
+
+doPrintPreview = (function(){
+	window.open(location.href + '?print=true');
+});
+
+$(function() {
+	// URLパラメータに'print'が存在する場合
+	if ( location.href.indexOf('?print') > -1) {
+		
+		console.log("print view box");
+		
+		// bodyにprintクラスを付加
+		$("body").addClass('print');
+		
+		// .btnBoxの中身を空にし、印刷ボタンをアベンド
+		$('.btnBox').html('').append('<input type="button" value="印刷する" id="doPrint" name="doPrint">');
+		
+		//印刷ボタンのクリックイベントに印刷機能を設定
+		$('#doPrint').click(function(){
+			window.print();
+		});
+			
+	}
+});
+
+$(function() {
+    //$('body').prepend("<section class='sheet padding-10mm'>");
+    //$('body').appendTo("</section>");
+});
+
+//angular.element(document.getElementsByClassName('001').css('background-color', 'yellow'))
+
+{% load custom %}
+// Add noSanitize ngSanitize
+var app = angular.module('myApp',["ngSanitize"]);
+
+/* app.controller('myController', ['$scope', fonction($scope) {
+	console.log($scope);
+}]); */
+	
+app.controller('myController',function(){
+	
+	this.reloadRoute = function() {
+		$window.location.reload();
+	}
+	
+	this.onclick = function(){
+		console.log("test");
+	};
+	
+	this.members = [
+		{% for line in data %}          
+		{
+			user_id: "{{ line.user_id}}",
+			last_name_kana: "{{ line.last_name_kana }}",	
+			first_name_kana: "{{ line.first_name_kana }}",
+			last_name:  "{{ line.last_name_kan }}",
+			first_name: "{{ line.first_name_kan }}",
+			age:         {{ line.age }},
+			final_education: "{{ line.final_education }}",
+			gender:     "{{ line.gender__gender }}",
+			railway_routes: "{{ line.address__railway_routes }}",
+			station:    "{{ line.address__station }}",
+			working:     {{ line.address__working }},
+			nationality: "{{ line.nationality }}",
+			appeal:     "{{ line.appeal }}"
+		}
+	  {% endfor %}	  
+	];
+		
+ 	this.licenses = [
+    	{
+	  		{% for line in licenses %}
+	  			license_{{ forloop.counter }}: "{{ line.license__license }}"{% if forloop.last %}{% else %},{% endif %}
+	  		{% endfor %}
+	    }
+	];
+		
+	this.projects = [
+	{% for page in projects_page %}	
+		{% for projects in page %}
+			{
+				page : [
+			{% for line in projects %}
+					{
+	 					id: "{{ line.agreement__subprojectoverview__id}}", 					
+	 					//num: "{{ forloop.counter }}",
+	 					num : "{{ line.num }}",
+	 					name: "{{ line.agreement__subprojectoverview__name }}",
+	 					scale : "{{ line.agreement__subprojectoverview__scale }}",
+	 					comment : "{{ line.agreement__subprojectoverview__comment | linebreaksbr }}",
+	 					position : "{{ line.agreement__subprojectoverview__position__name}}",
+	 					position_id : "{{ line.agreement__subprojectoverview__position__id}}",
+	 					start_date : "{{ line.agreement__subprojectoverview__start_date|date:"Y年M" }}",
+	 					sort_date : "{{ line.agreement__subprojectoverview__start_date|date:"Ymd" }}",
+	 					end_date : "{{ line.agreement__subprojectoverview__end_date|date:"Y年M末"}}",
+	 					work_scope_top : "{{ line.agreement__subprojectoverview__work_scope_top__workscope__name}} {{ line.agreement__subprojectoverview__work_scope_top__workscope__initial}}",
+	 					work_scope_bottom : "{{ line.agreement__subprojectoverview__work_scope_bottom__workscope__name}} {{ line.agreement__subprojectoverview__work_scope_bottom__workscope__initial}}",
+	 		 			{% with line.agreement__subprojectoverview__end_date as end %}
+	 						bitween : "{{ line.agreement__subprojectoverview__start_date|bitween:end }}",
+	 					{% endwith %}
+	 		 			{% with line.agreement__subprojectoverview__id as id %}
+	 	 				{% for data in programs|lookup:id %}
+	 	 				{% if data %}
+	 	 					program_skill_name_{{ forloop.counter }} : "{{ data.name }}",
+	 	 					program_skill_id_{{ forloop.counter }} : "{{ data.skill_id }}"
+	 	 					{% if forloop.last %},{% else %},{% endif %}
+	 	 				{% endif %}
+	 	 				{% endfor %}
+	 	 				{% for data in environment|lookup:id %}
+	 	 				{% if data %}
+	 	 					environment_skill_name_{{ forloop.counter }} : "{{ data.name　}}",
+	 	 					environment_skill_id_{{ forloop.counter }} : "{{ data.skill_id }}"
+	 	 					{% if forloop.last %}{% else %},{% endif %}
+	 	 				{% endif %}
+	 	 				{% endfor %}
+	 	 				{% endwith %}	
+					}{% if forloop.last %},{% else %},{% endif %}
+			{% endfor %}
+				]
+			}{% if forloop.last %}{% else %},{% endif %}
+		{% endfor %}
+		{% if forloop.last %}{% else %},{% endif %}
+	{% endfor %}
+	];
+		
+});
+
+//using jQuery
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+var csrftoken = getCookie('csrftoken');
+
+function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+
+$.ajaxSetup({
+    crossDomain: false, // obviates need for sameOrigin test
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type)) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+    }
+});
+
+var item = undefined;
+app.directive('addText', function(){
+	return {
+		link: function(scope, elem) {
+			
+			elem.on('click', function (){
+				
+				// オブジェクトがなければ選択したオブジェクトを格納
+				// オブジェクトにカウントを追加（カウント：制御コード）
+				if ( !item ) {
+					item = angular.element($(this));
+					item["control_code"] = 0;
+				}
+				
+				// クリックしてテキストエリアに変更
+				if ( item["control_code"] == 0 ) {
+					console.log("item 0 : " + item["control_code"] );
+					var text = item.text();
+					//var html = '<textarea id="textarea" style="width:95%; height:150px;">' + item.html() + '</textarea>';
+					var html = '<input type="text" id="text" style="padding:0; border:none;" value=' + text + ' >';
+					item.html(html);
+					item["control_code"] = item["control_code"]+ 1;
+				}
+				// テキストエリアを選択
+				// テキストエリアが解除されないように制御
+				// 文字を入力
+				// テキストエリアが解除されないように制御
+					if ( item["control_code"] >= 1 ) {
+					console.log("item 1 : " + item["control_code"] );							
+					item["control_code"] = item["control_code"]+ 1;
+				}
+				// テキストエリアを選択　入力文字を反映してテキストアリアを解除する
+				if ( item["control_code"] > 3 ) {
+					console.log("item 2 : " + item["control_code"] );
+					console.log(document.getElementById('text').value);
+					var id = $("#text").parents("tr").attr("id");
+					var type = $("#text").parents("td").attr("id");
+					console.log(id);
+					console.log("type ------------------- ");
+					console.log(type);
+					console.log("type ------------------- ");
+					var dat = document.getElementById('text').value;
+					item.html('<p>' + dat + '</p>');
+					item = undefined;
+					
+					var JSONdata = {
+							'id': id,
+							'dat': dat
+					};
+					
+					console.log(JSONdata);
+					
+  					$.ajax({
+ 						type: 'POST',
+						url: "/skill-s/update/" + type + "/",
+						dataType : 'JSON',
+						data: JSON.stringify(JSONdata),
+						complete: function(xhr, textStatus) {
+							
+						},
+						success: function(result, textStatus, xhr) {
+							alert('OK');
+						},
+						errr: function(xhr, textStatus, error) {
+							alert('NG')
+						}						
+					});
+					
+				}
+				
+			});					
+		}
+	};
+});
+
+
+
+
+
+var item = undefined;
+app.directive('addTextarea', function(){
+	return {
+		link: function(scope, elem) {
+			
+			elem.on('click', function (){
+				
+				// オブジェクトがなければ選択したオブジェクトを格納
+				// オブジェクトにカウントを追加（カウント：制御コード）
+				if ( !item ) {
+					item = angular.element($(this));
+					item["control_code"] = 0;
+				}
+				
+				// クリックしてテキストエリアに変更
+				if ( item["control_code"] == 0 ) {
+					console.log("item 0 : " + item["control_code"] );
+					//var text = item.text();
+					var text = item.html();
+					//console.log(text);
+					text = text.replace(/<p ng-bind-html="project.comment" class="ng-binding">/, "");
+					text = text.replace(/<p ng-bind-html="member.appeal" class="ng-binding">/, "");
+					text = text.replace(/<p>/, "");
+					text = text.replace(/<\/p>/g, "");
+					text = text.replace(/<br>/g, "\r\n");
+					//var html = '<textarea id="textarea" style="width:95%; height:150px;">' + item.html() + '</textarea>';
+					var html = '<textarea id="textarea" style="padding:0; border:none; width:100%; height:150px; display:block;">'
+					+ text + '</textarea>';
+					item.html(html);
+					item["control_code"] = item["control_code"]+ 1;
+				}
+				// テキストエリアを選択
+				// テキストエリアが解除されないように制御
+				// 文字を入力
+				// テキストエリアが解除されないように制御
+					if ( item["control_code"] >= 1 ) {
+					console.log("item 1 : " + item["control_code"] );							
+					item["control_code"] = item["control_code"]+ 1;
+				}
+				// テキストエリアを選択　入力文字を反映してテキストアリアを解除する
+				if ( item["control_code"] > 3 ) {
+					console.log("item 2 : " + item["control_code"] );
+					console.log(document.getElementById('textarea').value);
+					var id = $("#textarea").parents("tr").attr("id");
+					var type = $("#textarea").parents("td").attr("id");
+					console.log(id);
+					console.log("type ---------------------- ");
+					console.log(type);
+					console.log("type ---------------------- ");
+					var dat = document.getElementById('textarea').value;
+					var vdat = dat;
+					vdat = vdat.replace(/\r\n/g, "\n");
+					vdat = vdat.replace(/\r/g, "\n");
+					vdat = vdat.replace(/\n/g, "<br>");
+					console.log(vdat);
+					item.html('<p>' + vdat + '</p>');
+					item = undefined;
+					
+					var JSONdata = {
+							'id': id,
+							'dat': dat
+					};
+					
+					console.log(JSONdata);
+					
+  					$.ajax({
+ 						type: 'POST',
+						url: "/skill-s/update/" + type + "/",
+						dataType : 'JSON',
+						data: JSON.stringify(JSONdata),
+						complete: function(xhr, textStatus) {
+							
+						},
+						success: function(result, textStatus, xhr) {
+							alert('OK');
+						},
+						errr: function(xhr, textStatus, error) {
+							alert('NG')
+						}						
+					});
+					
+				}
+				
+			});					
+		}
+	};
+});
+
+var selectflag = 0;
+var cnt = 0;
+
+var method = {};
+//var sel;
+//var program_sel = function(id,skill_id,prog_name) {
+method['program'] = function(id,skill_id,prog_name) {	
+	var d = $.Deferred();
+		
+	var JSONdata = {
+		'proj_id':id
+	};
+	
+	$.ajax({
+		type: 'POST',
+		url: "/skill-s/programs/",
+		dataType: 'JSON',
+		data: JSON.stringify(JSONdata),
+		success: function(data) {
+			//console.log(data.list.length);
+			//var opt;
+			var opt = '<option value=' + 'del_' + skill_id + '>' + ' ';
+			if ( prog_name ) {
+			    opt += '<option value=' + skill_id + ' selected>' + prog_name;
+			}
+			for (var i = 0; i < data.list.length; i++) {
+				opt += '<option value=' + data.list[i].id + '>' + data.list[i].prog_name;
+			}
+			sel = '<select name="program_sel" class="extraction custom02" id="002">' + opt + '</select>';
+			return d.resolve(sel);
+		},
+		error: function(){
+			alert('NG....');
+		}
+	});
+	return d.promise();
+};
+
+method['environment'] = function(id,skill_id,prog_name) {	
+	var d = $.Deferred();
+		
+	var JSONdata = {
+		'proj_id':id
+	};
+	
+	$.ajax({
+		type: 'POST',
+		url: "/skill-s/environments/",
+		dataType: 'JSON',
+		data: JSON.stringify(JSONdata),
+		success: function(data) {
+			console.log(data.list);
+			//var opt;
+			var opt = '<option value=' + 'del_' + skill_id + '>' + ' ';
+			if ( prog_name ) {
+			    opt += '<option value=' + skill_id + ' selected>' + prog_name;
+			}
+			for (var i = 0; i < data.list.length; i++) {
+				opt += '<option value=' + data.list[i].id + '>' + data.list[i].env_name;
+			}
+			sel = '<select name="program_sel" class="extraction custom02" id="002">' + opt + '</select>';
+			return d.resolve(sel);
+		},
+		error: function(){
+			alert('NG....');
+		}
+	});
+	return d.promise();
+};
+
+method['work-scope-top'] = function(id,skill_id,prog_name) {	
+	var d = $.Deferred();
+		
+	var JSONdata = {
+		'proj_id':id
+	};
+	
+	$.ajax({
+		type: 'POST',
+		url: "/skill-s/work-scope-top/",
+		dataType: 'JSON',
+		data: JSON.stringify(JSONdata),
+		success: function(data) {
+			console.log(data.list);
+			//var opt;
+			var opt = '<option value=' + 'del_' + skill_id + '>' + ' ';
+			if ( prog_name ) {
+			    opt += '<option value=' + skill_id + ' selected>' + prog_name;
+			}
+			for (var i = 0; i < data.list.length; i++) {
+				opt += '<option value=' + data.list[i].id + '>' + data.list[i].name　+ " " + data.list[i].initial;
+			}
+			sel = '<select name="program_sel" class="extraction custom02" id="002">' + opt + '</select>';
+			return d.resolve(sel);
+		},
+		error: function(){
+			alert('NG....');
+		}
+	});
+	return d.promise();
+};
+
+method['work-scope-bottom'] = function(id,skill_id,prog_name) {	
+	var d = $.Deferred();
+		
+	var JSONdata = {
+		'proj_id':id
+	};
+	
+	$.ajax({
+		type: 'POST',
+		url: "/skill-s/work-scope-bottom/",
+		dataType: 'JSON',
+		data: JSON.stringify(JSONdata),
+		success: function(data) {
+			console.log(data.list);
+			//var opt;
+			var opt = '<option value=' + 'del_' + skill_id + '>' + ' ';
+			if ( prog_name ) {
+			    opt += '<option value=' + skill_id + ' selected>' + prog_name;
+			}
+			for (var i = 0; i < data.list.length; i++) {
+				opt += '<option value=' + data.list[i].id + '>' + data.list[i].name　+ " " + data.list[i].initial;
+			}
+			sel = '<select name="program_sel" class="extraction custom02" id="002">' + opt + '</select>';
+			return d.resolve(sel);
+		},
+		error: function(){
+			alert('NG....');
+		}
+	});
+	return d.promise();
+};
+
+method['position'] = function(id,skill_id,prog_name) {
+	var d = $.Deferred();
+		
+	var JSONdata = {
+		'proj_id':id
+	};
+	
+	$.ajax({
+		type: 'POST',
+		url: "/skill-s/position/",
+		dataType: 'JSON',
+		data: JSON.stringify(JSONdata),
+		success: function(data) {
+			console.log(data.list);
+			//var opt;
+			var opt = '<option value=' + 'del_' + skill_id + '>' + ' ';
+			for (var i = 0; i < data.list.length; i++) {			
+				if ( (prog_name || prog_name != 'None') &&  data.list[i].name == prog_name ) {
+					opt += '<option value=' + skill_id + ' selected>' + prog_name;
+				} else if ( skill_id != data.list[i].id ) {
+					opt += '<option value=' + data.list[i].id + '>' + data.list[i].name;
+				}
+			}
+			sel = '<select name="program_sel" class="extraction custom02" id="002">' + opt + '</select>';
+			return d.resolve(sel);
+		},
+		error: function(){
+			alert('NG....');
+		}
+	});
+	return d.promise();
+};
+
+var chk_id;
+app.directive('selText', function(){
+	return {
+		link: function(scope, elem, attrs) {
+			elem.on('click', function() {						
+				var item = angular.element($(this));
+				var el = document.getElementById('002');
+				var id = $(this).parents("tr").attr("id");
+				var skill_id = item.attr('id');
+				var prog_name = item.text();
+
+				console.log(attrs.selText)
+				console.log("id -- : " + item.attr('id'));
+				console.log("selectflag X : " + selectflag);
+				
+				//var sel;
+				if ( selectflag == 0 ) {
+					console.log("selectflag 0 : " + selectflag );
+					chk_id = skill_id;
+					$.when(
+						//program_sel(id,skill_id,prog_name)
+						method[attrs.selText](id,skill_id,prog_name)
+					// sel には　program_sel　d.resolve(sel) で返却された値が入る。 
+					).done(function(sel) {
+						console.log("sel : " + sel);
+						item.html(sel);
+						selectflag = 1;
+					})
+
+				} 
+				
+				if ( selectflag >= 1 ) {
+					
+					var sel_id = item.children("select").attr("id");
+					console.log("proj_id : " + proj_id);
+					//if ( chk_id == skill_id ) {
+					if ( sel_id ) {
+						console.log("selectflag 1 : " + selectflag );
+						selectflag = selectflag + 1;
+					}
+					
+				}
+				
+				if ( selectflag > 3 ) {
+					
+					var sel_id = item.children("select").attr("id");
+					
+					//if ( chk_id == skill_id ) {
+					if ( sel_id ) {
+						
+					console.log("selectflag 2 : " + selectflag );
+					if ( el ) {
+						console.log("1 --- 002 click");
+						var skill_id = $('[name=program_sel]').val();
+						var proj_id = $("#002").parents("tr").attr("id");
+						console.log(skill_id);
+						console.log(proj_id);
+						console.log(attrs.selText);
+						
+						item.html('<span>' + $('[name=program_sel] option:selected').text() + '</span>');
+						selectflag = 0;
+
+						var JSONdata = {
+								'skill_id':skill_id,
+								'proj_id':proj_id
+						};
+						
+	  					$.ajax({
+	 						type: 'POST',
+							//url: "/skill-s/update/program/",
+							url: "/skill-s/update/" + attrs.selText + "/", 
+							dataType : 'JSON',
+							data: JSON.stringify(JSONdata),
+							complete: function(xhr, textStatus) {
+								
+							},
+							success: function(result, textStatus, xhr) {
+								alert('OK');
+							},
+							errr: function(xhr, textStatus, error) {
+								alert('NG')
+							}						
+						});						
+						
+					}
+					
+					}
+				}
+				
+			})
+
+		}
+	};
+});
+
+app.directive('selDel', function() {
+	return {
+		link: function(scope, elem, attrs) {
+			elem.on('click', function(e) {
+				console.log("delete");
+				//var item = angular.element($(this));
+				var id = $(this).parent("tr").attr("id");
+				console.log(id);
+				console.log(e.pageX);
+				 $("#z1").attr("data-id", id);
+		         $("#z1").css({
+		             top:e.pageY  +"px",
+		             left:e.pageX +"px"
+		         }); 
+		         $("#z1")
+		         .data("tbx" , e.pageX - $("#z1").offset().left)
+		         .data("tby" , e.pageY - $("#z1").offset().top);
+				$("#z1").fadeIn("fast");
+				
+			})
+		}
+	};
+});
+
+$(function(){
+$("#z1id_can").click(function(){
+    $("#z1").fadeOut("fast");
+    return false;
+});
+});
+
+$(function(){
+$("#z1id_del").click(function(){
+	
+	var id = $("#z1").attr("data-id");
+	console.log("delete : " + id);
+
+	var JSONdata = {
+			'proj_id':id
+	};
+	
+    if(window.confirm("データを削除しますがよろしいですか？")) {
+		$.ajax({
+			type: 'POST',
+			url: "/skill-s/delete/",
+			dataType: 'JSON',
+			data: JSON.stringify(JSONdata),
+			success: function(data) {
+				console.log(data);
+			},
+			error: function(){
+				alert('NG....');
+			}
+		});		
+        //location.href = $(this).attr('href');
+        window.location.reload();
+    } else {
+        return false;
+    }
+    $("#z1").fadeOut("fast");
+    return false;
+});
+});
+
+
+
+
+function section_start() {
+    var html = '<section class="sheet padding-10mm">';
+    document.write(html);
+}
+
+function section_end() {
+    var html = '</section>';
+    document.write(html);
+}
+
+
+
+
+
+</script>
+
+
+</head>
+
+<body ng-controller="myController as myCtrl" dir="ltr" width="19cm" class="A4">
+
+{% csrf_token %}
+{% verbatim %}
+    <div ng-repeat="pages in myCtrl.projects" class="sheet padding-10mm">
+    <!-- <section class="sheet padding-10mm"> -->
+	<table border="0" cellspacing="0" cellpadding="0" class="ta1" ng-if="$index == 0">
+		<tr class="ro1">
+			<td colspan="28" rowspan="2"
+				style="text-align: left; width: 22.58mm;" class="ce1"><p>■技術者経歴書■</p></td>
+		</tr>
+		<tr />
+		<tr ng-repeat="member in myCtrl.members" class="ro2">
+			<td colspan="3" style="text-align: left; width: 22.58mm;" class="ce2"><p>フリガナ</p></td>
+			<td colspan="8" style="text-align: left; width: 22.58mm;"
+				class="ce16"><p>{{ member.last_name_kana }}{{ member.first_name_kana }}</p></td>
+			<td colspan="2" style="text-align: left; width: 22.58mm;"
+				class="ce10"><p>性別</p></td>
+			<td colspan="2" style="text-align: left; width: 22.58mm;"
+				class="ce10"><p>年齢</p></td>
+			<td colspan="2" style="text-align: left; width: 22.58mm;"
+				class="ce10"><p>国籍</p></td>
+			<td colspan="8" style="text-align: left; width: 22.58mm;"
+				class="ce10"><p>最寄駅</p></td>
+			<td colspan="3" style="text-align: left; width: 22.58mm;"
+				class="ce29"><p>徒歩</p></td>
+		</tr>
+
+		<tr ng-repeat="member in myCtrl.members" class="ro1">
+			<td colspan="3" rowspan="2" style="text-align: left; width: 22.58mm;"
+				class="ce3"><p>名前</p></td>
+			<td colspan="8" rowspan="2" style="text-align: left; width: 22.58mm;"
+				class="ce17"><p>{{ member.last_name }} {{ member.first_name }}</p></td>
+			<td colspan="2" rowspan="2" style="text-align: left; width: 22.58mm;"
+				class="ce17"><p>{{ member.gender }}</p></td>
+			<td colspan="2" rowspan="2"
+				style="text-align: right; width: 22.58mm;" class="ce17"><p>{{ member.age }}</p></td>
+			<td colspan="2" rowspan="2" style="text-align: left; width: 22.58mm;"
+				class="ce17"><p>{{ member.nationality }}</p></td>
+			<td colspan="3" rowspan="2" style="text-align: left; width: 22.58mm;"
+				class="ce25"><p>{{ member.railway_routes }}</p></td>
+			<td rowspan="2" style="text-align: left; width: 22.58mm;"
+				class="ce26"><p>線</p></td>
+			<td colspan="3" rowspan="2" style="text-align: left; width: 22.58mm;"
+				class="ce26"><p>{{ member.station }}</p></td>
+			<td rowspan="2" style="text-align: left; width: 22.58mm;"
+				class="ce28"><p>駅</p></td>
+			<td colspan="2" rowspan="2"
+				style="text-align: right; width: 22.58mm;" class="ce25"><p>{{ member.working }}</p></td>
+			<td rowspan="2" style="text-align: left; width: 22.58mm;"
+				class="ce33"><p>分</p></td>
+		</tr>
+        <tr />
+
+		<tr class="ro2">
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+			<td style="text-align: left; width: 22.58mm;" class="ce4"> </td>
+		</tr>
+	
+		<tr ng-repeat="member in myCtrl.members" class="ro2">
+			<td colspan="12" style="text-align: left; width: 22.58mm;"
+				class="ce2"><p>資格・免許</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce10"><p>最終学歴</p></td>
+			<td colspan="12" style="text-align: left; width: 22.58mm;"
+				class="ce23"><p>{{ member.final_education }}</p></td>
+		</tr>
+		<tr class="ro2">
+			<td colspan="12" style="text-align: left; width: 22.58mm;"
+				class="ce5"><p ng-repeat="license in myCtrl.licenses">{{ license.license_1 }}</p></td>
+			<td colspan="16" style="text-align: left; width: 22.58mm;"
+				class="ce21"><p>アピール</p></td>
+		</tr>
+		<tr ng-repeat="member in myCtrl.members"　class="ro3" id="{{ member.user_id }}">
+			<td colspan="12" style="text-align: left; width: 22.58mm;"
+				class="ce6"><p ng-repeat="license in myCtrl.licenses">{{ license.license_2 }}</p></td>
+			<td ng-repeat="member in myCtrl.members" colspan="16" rowspan="9"
+				style="text-align: left; width: 22.58mm;" class="ce22" id="appeal" add-textarea><p ng-bind-html="member.appeal">{{ member.appeal }}</p></td>
+		</tr>
+		<tr class="ro2">
+			<td colspan="12" style="text-align: left; width: 22.58mm;"
+				class="ce6"><p ng-repeat="license in myCtrl.licenses">{{ license.license_3 }}</p></td>
+		</tr>
+		<tr class="ro2">
+			<td colspan="12" style="text-align: left; width: 22.58mm;"
+				class="ce6"><p>{{ license_4 }}</p></td>
+		</tr>
+		<tr class="ro2">
+			<td colspan="12" style="text-align: left; width: 22.58mm;"
+				class="ce6"><p>{{ license_5 }}</p></td>
+		</tr>
+		<tr class="ro2">
+			<td colspan="12" style="text-align: left; width: 22.58mm;"
+				class="ce6"><p>{{ license_6 }}</p></td>
+		</tr>
+		<tr class="ro2">
+			<td colspan="12" style="text-align: left; width: 22.58mm;"
+				class="ce7"><p>{{ license_7 }}</p></td>
+		</tr>
+		<tr class="ro2">
+			<td colspan="12" style="text-align: left; width: 22.58mm;"
+				class="ce6"><p>{{ license_8 }}</p></td>
+		</tr>
+		<tr class="ro2">
+			<td colspan="12" style="text-align: left; width: 22.58mm;"
+				class="ce8"><p>{{ license_9 }}</p></td>
+		</tr>
+	</table>
+
+	<div ng-repeat="page in pages">
+	<table border="0" cellspacing="0" cellpadding="0" class="ta1">
+		<tbody>    
+		<tr style="height:20px">
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+			<td style="text-align: left; width: 22.58mm; height:1px;"></td>
+		</tr>
+		</tbody>
+		<tbody ng-repeat="project in page">
+		<tr class="ro2" >
+			<td style="text-align: left; width: 22.58mm;" class="ce2"><p>No.</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce10"><p>作業期間</p></td>
+			<td colspan="11" style="text-align: left; width: 22.58mm;"
+				class="ce10"><p>業務内容</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce10"><p>言語</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce10"><p>環境・ツール等</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;" class="ce29"><p>作業範囲</p></td>
+		</tr>
+		<div>
+		<tr class="ro2" id="{{ project.id }}">
+			<td rowspan="7" style="text-align: right; width: 22.58mm;"
+				class="ce9" sel-del><p> {{ project.num }} </p></td>
+			<td colspan="4" rowspan="2"
+				style="text-align: right; width: 22.58mm;" class="ce11"><p>{{ project.start_date }}</p></td>
+			<td colspan="11" style="text-align: left; width: 22.58mm;"
+				class="ce19" id="name" add-text><p>{{ project.name }}</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce24" id="{{ project.program_skill_id_1 }}" sel-text="program"><p>{{ project.program_skill_name_1 }}</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce24" id="{{ projext.environment_skill_id_1 }}" sel-text="environment"><p>{{ project.environment_skill_name_1 }}</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce30" sel-text="work-scope-top"><p>{{ project.work_scope_top }}</p></td>
+		</tr>
+		<tr class="ro4" id="{{ project.id }}">
+			<td colspan="11" rowspan="6"
+				style="text-align: left; width: 22.58mm;" class="ce20" id="comment" add-textarea><p ng-bind-html="project.comment">{{ project.comment }}</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce24" id="{{ project.program_skill_id_2 }}" sel-text="program"><p>{{ project.program_skill_name_2 }}</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce24" id="{{ project.environment_skill_id_2 }}" sel-text="environment"><p>{{ project.environment_skill_name_2 }}</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce30"><p>～</p></td>
+		</tr>
+		<tr class="ro2" id="{{ project.id }}">
+			<td style="text-align: left; width: 22.58mm;" class="ce12"> </td>
+			<td colspan="2" style="text-align: left; width: 22.58mm;"
+				class="ce15"><p>～</p></td>
+			<td style="text-align: left; width: 22.58mm;" class="ce18"> </td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce24" id="{{ project.program_skill_id_3 }}" sel-text="program"><p>{{ project.program_skill_name_3 }}</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce24" id="{{ project.environment_skill_id_3 }}" sel-text="environment"><p>{{ project.environment_skill_name_3 }}</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce30" sel-text="work-scope-bottom"><p>{{ project.work_scope_bottom }}</p></td>
+		</tr>
+		<tr class="ro4" id="{{ project.id }}">
+			<td colspan="4" rowspan="2"
+				style="text-align: right; width: 22.58mm;" class="ce13"><p>{{ project.end_date }}</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce24" id="{{ project.program_skill_id_4 }}" sel-text="program"><p>{{ project.program_skill_name_4 }}</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce24" id="{{ project.environment_skill_id_4 }}" sel-text="environment"><p>{{ project.environment_skill_name_4 }}</p></td>
+			<td colspan="4" rowspan="2" style="text-align: left; width: 22.58mm;"
+				class="ce31"><p>規模</p>
+				<p>ポジション</p></td>
+		</tr>
+		<tr class="ro4" id="{{ project.id }}">
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce24" id="{{ project.program_skill_id_5 }}" sel-text="program"><p>{{ project.program_skill_name_5 }}</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce24" id="{{ project.environment_skill_id_5 }}" sel-text="environment"><p>{{ project.environment_skill_name_5 }}</p></td>
+		</tr>
+		<tr class="ro4" id="{{ project.id }}">
+			<td colspan="4" rowspan="2"
+				style="text-align: right; width: 22.58mm;" class="ce14"><p>{{ project.bitween }}</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce24" id="{{ project.program_skill_id_6 }}" sel-text="program"><p>{{ project.program_skill_name_6 }}</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce24" id="{{ project.environment_skill_id_6 }}" sel-text="environment"><p>{{ project.environment_skill_name_6 }}</p></td>
+			<td colspan="3" style="text-align: right; width: 22.58mm;"
+				class="ce32" id="scale" add-text><p>{{ project.scale }}</p></td>
+			<td style="text-align: left; width: 22.58mm;" class="ce34"><p>名</p></td>
+		</tr>
+		<tr class="ro4" id="{{ project.id }}">
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce24" id="{{ project.program_skill_id_7 }}" sel-text="program"><p>{{ project.program_skill_name_7 }}</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce24" id="{{ project.environment_skill_id_7 }}" sel-text="environment"><p>{{ project.environment_skill_name_7 }}</p></td>
+			<td colspan="4" style="text-align: left; width: 22.58mm;"
+				class="ce30" id ="{{ project.position_id }}" sel-text="position"><p>{{ project.position }}</p></td>
+		</tr>
+		</tbody>
+	</table>
+	</div>
+</div>
+{% endverbatim %}
+
+<!--  
+<table id="z1" style="width:100px; height:50px;"">
+<tr>
+<td>Delete Button</td>
+</tr>
+</table>
+-->
+
+<ul id="z1" class="menu">
+<li class="user-footer">
+<div class="pull-left">
+<a href="#" class="btn btn-default btn-flat" id="z1id_del">削除</a>
+</div>
+<div class="pull-right">
+<a href="#" class="btn btn-default btn-flat" id="z1id_can">閉じる</a>
+</div>
+</li>
+</ul>
+
+
+</body>
+</html>

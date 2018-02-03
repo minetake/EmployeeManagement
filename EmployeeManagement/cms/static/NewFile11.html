@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<style type="text/css">
+/*cssの記述*/
+#z1 {
+    display:none;
+    position:absolute;
+    background-color:#c0c0c0;
+    box-shadow: 4px 4px 4px -2px gray;
+    top:0;
+    left:0;
+    }
+ 
+#z1 table th {
+    cursor:move;
+    }
+</style>
+
+</head>
+<script>
+$(function(){
+    //$("#z2").click(function(e){
+    	$(this).click(function(e){
+    	
+        console.log(e.pageX);
+        
+/*          $("#z1").css({
+            top:e.pageY  - $("#z1").data("tby")+"px",
+            left:e.pageX - $("#z1").data("tbx")+"px"
+        }); */
+        
+         $("#z1").css({
+             top:e.pageY  +"px",
+             left:e.pageX +"px"
+         }); 
+         
+         
+         $("#z1")
+        .data("tbx" , e.pageX - $("#z1").offset().left)
+        .data("tby" , e.pageY - $("#z1").offset().top);
+    	
+        $("#z1").fadeIn("fast");
+        return false;
+    });
+    $("#z1").click(function(){
+        $("#z1").fadeOut("fast");
+        return false;
+    });
+
+    $("#z1").mousedown(function(e){  
+    	
+    	console.log("mousedown");
+    	
+        $("#z1").data("tbx" , e.pageX - $("#z1").offset().left)
+            .data("tby" , e.pageY - $("#z1").offset().top);
+         
+        $(document).mousemove(function(e){
+            $("#z1").css({
+                top:e.pageY  - $("#z1").data("tby")+"px",
+                left:e.pageX - $("#z1").data("tbx")+"px"
+            });
+        });
+    }).mouseup(function(){
+        $(document).unbind("mousemove");
+    });
+});
+</script>
+
+
+<body>
+
+<table id="z1" border="1" style="width:400px; height:50px;"">
+<tr>
+<td>test</td>
+</tr>
+</table>
+
+<br>
+<br>
+<a href="#" id="z2">リファレンス</a>
+<br>
+<a href="#" id="z3">閉じる</a>
+
+</body>
+</html>

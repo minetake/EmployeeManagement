@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	
+	
+	
+	$('#001').click(function(){
+		var val = $(this).text();
+		$(this).html("<textarea id='001'>"+ val + "</textarea>");
+	});
+	
+	$(this).on('click',function(e){
+		//alert(e);
+		console.log(e.target.id);
+		if (e.target.id != "001") {
+			var val = $('#001').text();
+			$('#001').html("<div id='001'>"+ val + "</div>");
+		}
+	});
+	
+});
+
+
+
+
+</script>
+</head>
+<body>
+
+<div id="001">
+test
+</div>
+
+</body>
+</html>
