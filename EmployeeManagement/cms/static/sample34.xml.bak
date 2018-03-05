@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample_list>
+	<sample>
+		<title>ページ内を自在にスクロール | よく使うjQuery</title>
+		<url>http://www.finefinefine.jp/web/kiji1388/</url>
+	</sample>
+	<sample>
+		<title>タブの切替 | よく使うjQuery</title>
+		<url>http://www.finefinefine.jp/web/kiji422/</url>
+	</sample>
+	<sample>
+		<title>jQueryでプルダウンメニュー（たった5行で！）</title>
+		<url>http://www.finefinefine.jp/web/kiji1581/</url>
+	</sample>
+</sample_list>
